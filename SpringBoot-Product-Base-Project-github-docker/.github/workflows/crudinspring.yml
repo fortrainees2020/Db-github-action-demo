@@ -1,4 +1,4 @@
-name: springv1
+name: Spring v2
 
 on:
   push:
@@ -23,7 +23,7 @@ jobs:
           java-version: '21'
 
       - name: Build with Maven
-        working-directory: SpringBoot-Product-Base-Project-github-docker
+        working-directory: ./SpringBoot-Product-Base-Project-github-docker
         run: mvn clean install -DskipTests
 
   test:
@@ -42,5 +42,5 @@ jobs:
           java-version: '21'
 
       - name: Run Unit Tests
-        working-directory: SpringBoot-Product-Base-Project-github-docker
+        working-directory: ./SpringBoot-Product-Base-Project-github-docker
         run: mvn test
