@@ -1,4 +1,4 @@
-name: Spring Boot CI Pipeline
+name: springv1
 
 on:
   push:
@@ -23,9 +23,8 @@ jobs:
           java-version: '21'
 
       - name: Build with Maven
-        run: |
-          cd SpringBoot-Product-Base-Project-github-docker
-          mvn clean install -DskipTests
+        working-directory: SpringBoot-Product-Base-Project-github-docker
+        run: mvn clean install -DskipTests
 
   test:
     name: Run Tests
@@ -43,6 +42,5 @@ jobs:
           java-version: '21'
 
       - name: Run Unit Tests
-        run: |
-          cd SpringBoot-Product-Base-Project-github-docker
-          mvn test
+        working-directory: SpringBoot-Product-Base-Project-github-docker
+        run: mvn test
