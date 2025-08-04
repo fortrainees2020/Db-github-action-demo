@@ -23,8 +23,8 @@ jobs:
           java-version: '21'
 
       - name: Build with Maven
-        working-directory: ./SpringBoot-Product-Base-Project-github-docker
         run: mvn clean install -DskipTests
+        working-directory: SpringBoot-Product-Base-Project-github-docker
 
   test:
     name: Run Tests
@@ -42,5 +42,5 @@ jobs:
           java-version: '21'
 
       - name: Run Unit Tests
-        working-directory: ./SpringBoot-Product-Base-Project-github-docker
         run: mvn test
+        working-directory: SpringBoot-Product-Base-Project-github-docker
